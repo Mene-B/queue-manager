@@ -1,0 +1,5 @@
+{
+    "token":"the token of your bot",
+    "prefix": "!",
+    "adminRoleId":"The ID of the admin role of your server"
+}
