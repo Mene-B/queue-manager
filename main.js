@@ -62,7 +62,7 @@ client.on("messageCreate", async(message)=>{
             return;
         }
         const embedText = datas.slice(0,9).map((element, index)=>{
-            const hours = ((new Date(+(element.time))).getHours().toString().length === 2)? (new Date(+(element.time))).getHours().toString() : "0"+(new Date(+(element.time))).getHours().toString();
+            const hours = (((new Date(+(element.time))).getHours()+2).toString().length === 2)? (new Date(+(element.time))).getHours().toString() : "0"+(new Date(+(element.time))).getHours().toString();
             const minutes = ((new Date(+(element.time))).getMinutes().toString().length === 2)? (new Date(+(element.time))).getMinutes().toString() : "0"+(new Date(+(element.time))).getMinutes().toString();;
             return `${(index+1).toString()} - <@${element.user_id}> | ${hours}:${minutes}`
         }).join("\n");
